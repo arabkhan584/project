@@ -1,0 +1,91 @@
+﻿<Page x:Class="WpfApp3.viu.Page_qw"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp3.viu"
+      Loaded="Page_Loaded"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page_qw">
+
+    <Grid Background="White">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="100" ></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <!--infa-->
+        <DataGrid Grid.Row="1"
+                  AutoGenerateColumns="False"
+                  x:Name="GridUser">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="*" Header="ID" Binding="{Binding Id}" />
+                <DataGridTextColumn Width="*" Header="Login" Binding="{Binding login1}" />
+                <DataGridTextColumn Width="*" Header="Password" Binding="{Binding password1}" />
+                <DataGridTextColumn Width="*" Header="Role" Binding="{Binding Role.role1 }" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        
+        <!--Navigation to back page-->
+        <Button  Click="riges_bth_Click"
+                Name="riges_bth"
+                Width="100"
+                Height="30"
+                Content="Назад"
+                HorizontalAlignment="Left"
+                Grid.Row="0"
+                Margin="10 3"/>
+        <StackPanel HorizontalAlignment="Right"
+                 Margin="10"
+                    Orientation="Horizontal" >
+            
+        <TextBox x:Name="poisk"
+                 Width="150"
+                 Height="20"
+                 Margin="5 0" />
+            <Button x:Name="poisk_bth"
+                    Click="poisk_bth_Click"
+                    Width="50"
+                    Height="20"
+                    Content="Поиск"/>
+        </StackPanel>
+
+
+
+
+        <!--Стекпанель с нижними элементами-->
+        <StackPanel Grid.Row="2" 
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Orientation="Horizontal" >
+            <Button Content="Добавить"
+                    Click="add_bth_Click"
+                    Name="add_bth"
+                    Width="100"
+                    Height="30"/>
+            <Button Content="Удалить"
+                    Click="delete_bth_Click"
+                    Name="delete_bth"
+                    Width="100" 
+                    Height="30" 
+                    Margin="20"/>
+            <Button Content="Печатать"
+                    Click="pech_bth_Click"
+                    Name="pech_bth"
+                    Width="100" 
+                    Height="30"/>
+            <Button Content="Редактировать" 
+                    Click="izm_bth_Click"
+                    Name="izm_bth"
+                    Width="100" 
+                    Height="30"
+                    Margin="20"/>
+            
+        </StackPanel>
+        
+    </Grid>
+</Page>

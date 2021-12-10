@@ -1,0 +1,74 @@
+﻿<Page x:Class="WpfApp3.viu.Page_reg"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp3.viu"
+      mc:Ignorable="d" 
+      Loaded="Page_Loaded"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page_reg">
+
+    <Grid Background="White">
+
+        <Button Content="Назад"
+                x:Name="poz_bth"
+                Click="poz_bth_Click"
+                Width="100" 
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="10"
+                Height="30"/>
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <Image Width="150"
+                   Margin="0 10"
+                   Source="C:\Users\user\source\repos\WpfApp2\WpfApp2\Images\logo.png" />
+            <StackPanel HorizontalAlignment="Center">
+                       <TextBlock Text="Регистрация"/>
+                   </StackPanel>
+               <StackPanel Orientation="Horizontal">
+                   
+                   <StackPanel Margin="0 10 10 0">
+                       <TextBlock Text="Введите логин" 
+                                  FontSize="15"/>
+                       <TextBlock Text="Введите пароль"
+                                  Margin="0 13 0 13"
+                                  FontSize="15"/>
+                       <TextBlock Text="Повторите пароль "
+                                  Margin="0 2 0 13"
+                                  FontSize="15"/>
+                    <TextBlock Text="Кем вы являетесь" 
+                               FontSize="15"/>
+
+                </StackPanel>
+                   <StackPanel Margin="0 12 ">
+                       <TextBox Width="150"
+                                x:Name="TxbLogin"/>
+                       <PasswordBox Width="150"
+                                    Name="passw1"
+                                Margin="0 15 0 15"/>
+                       <PasswordBox Width="150"
+                                Name="passw2" 
+                                    />
+                    <ComboBox Text="Выбрать"
+                              DisplayMemberPath="role1"
+                              Name="CmbRole"
+                              Margin="0 15"/>
+
+                </StackPanel>
+                   
+                   
+
+
+                </StackPanel>
+            <Button Click="avtoriz_bth_Click"
+                    Name="avtoriz_bth"
+                    Content="Зарегистрироватся" 
+                    Width="150"/>
+            
+
+        </StackPanel>
+
+    </Grid>
+</Page>
